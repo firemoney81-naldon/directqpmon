@@ -1,23 +1,783 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  
+  <!-- Schema.org JSON-LD for Search Engine Optimization -->
+  <!-- ItemList Schema (Article List for SEO) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "PV5 카니발 보험료 절약 정보",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "url": "https://example.com/pv5-cargo-passenger-comparison",
+            "name": "PV5 카니발 카고 vs 패신저 보험료 차이 분석: 어떤 모델이 더 저렴할까?",
+            "datePublished": "2025-11-20T00:00:00+09:00",
+            "author": {
+              "@type": "Person",
+              "name": "보험료 전문가"
+            },
+            "headline": "PV5 카니발 카고 vs 패신저 보험료 차이 분석: 어떤 모델이 더 저렴할까?"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "url": "https://example.com/pv5-model-insurance-calculation-guide",
+            "name": "PV5 모델별 보험료 예측하기 - 연식, 옵션, 운전자 조건별 미래 보험료 변동",
+            "datePublished": "2025-11-19T00:00:00+09:00",
+            "author": {
+              "@type": "Person",
+              "name": "보험료 전문가"
+            },
+            "headline": "PV5 모델별 보험료 예측하기 - 연식, 옵션, 운전자 조건별 미래 보험료 변동"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "url": "https://example.com/pv5-insurance-discounts-guide",
+            "name": "PV5 카니발 보험료 절약을 위한 할인 팁 - 블랙박스, 주행거리, 다자녀 혜택",
+            "datePublished": "2025-11-18T00:00:00+09:00",
+            "author": {
+              "@type": "Person",
+              "name": "보험료 전문가"
+            },
+            "headline": "PV5 카니발 보험료 절약을 위한 할인 팁 - 블랙박스, 주행거리, 다자녀 혜택"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- FAQPage Schema (for Naver search snippet optimization) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PV5 카고와 패신저 모델의 보험료 차이는 얼마나 발생하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PV5 카고 모델은 화물차로 분류되어 승용차인 패신저 모델에 비해 의무보험(책임보험) 금액이 높을 수 있지만, 전반적인 보험료(자차 포함)는 운전자 조건, 연식 등에 따라 달라집니다. 일반적으로 카고 모델이 차량가액이 낮고 사고 위험도가 다르게 책정되어 보험료 차이가 발생합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PV5 카니발 하이브리드 모델의 보험료는 일반 모델보다 비싼가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "하이브리드 차량은 일반 가솔린/디젤 차량보다 부품 가격이 높고, 특히 배터리 교체 비용이 비싸 자차 보험료가 다소 높게 책정될 수 있습니다. 하지만 친환경차 할인 등 일부 보험사에서 제공하는 혜택을 통해 상쇄될 여지가 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026년 이후 PV5 보험료는 어떻게 변동될 것으로 예상되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026년에는 첨단 안전장치 장착 의무화에 따른 보험료 할인 혜택 확대가 예상되며, 보험사별로 PV5 모델의 사고율을 정밀 분석하여 보험료가 조정될 수 있습니다. 운전자 보험료는 개인의 운전 습관에 따른 할인이 더욱 중요해질 전망입니다."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- 스타일: 다채로운 색감, 명확한 계층 구조, 텍스트 가독성 향상 -->
+  <style>
+    :root {
+      --primary-color: #004d40; /* Teal Dark */
+      --secondary-color: #00796b; /* Teal Medium */
+      --accent-color: #80cbc4; /* Teal Light */
+      --text-color: #263238; /* Blue Grey Dark */
+      --bg-light: #f4f8f7; /* Off-white background */
+      --bg-white: #ffffff;
+      --highlight-color: #ffb74d; /* Amber Light */
+      --btn-color: #ff8f00; /* Amber Dark */
+      --btn-hover: #e65100; /* Amber Extra Dark */
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--bg-white);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: var(--secondary-color);
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: var(--bg-white);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 15px;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+    }
+
+    main {
+      padding: 40px 0;
+    }
+
+    section {
+      background-color: var(--bg-white);
+      padding: 50px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.4em;
+      font-weight: 700;
+      margin-bottom: 25px;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    h3 {
+      color: var(--secondary-color);
+      font-size: 1.8em;
+      font-weight: 500;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-left: 5px solid var(--highlight-color);
+      padding-left: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.05em;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Form and CTA Button */
+    .cta-button {
+      background-color: var(--btn-color);
+      color: var(--bg-white);
+      padding: 18px 40px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      text-decoration: none;
+      display: block; /* block level button for prominence */
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .cta-button:hover {
+      background-color: var(--btn-hover);
+      transform: translateY(-3px);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--secondary-color);
+      color: var(--bg-white);
+      font-weight: 500;
+    }
+    tr:nth-child(even) {
+      background-color: var(--bg-light);
+    }
+
+    /* Keyword List Styling */
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+      margin-top: 25px;
+    }
+    .keyword-list li {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+    .keyword-list li:hover {
+      background-color: var(--highlight-color);
+    }
+
+    /* FAQ Styling */
+    .faq-item {
+      border: 1px solid var(--accent-color);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background-color: var(--highlight-color);
+      padding: 18px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--primary-color);
+      transition: background-color 0.3s;
+    }
+    .faq-question:hover {
+      background-color: #f7d9a8;
+    }
+    .faq-question span {
+      font-size: 1.2em;
+    }
+    .faq-answer {
+      padding: 20px;
+      background-color: var(--bg-light);
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Code for graphs (simulated by text) */
+    .graph-container {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      border: 1px solid #bbdefb;
+    }
+    .graph-bar {
+      height: 20px;
+      margin-bottom: 5px;
+      background-color: var(--secondary-color);
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 0.9em;
+      border-radius: 3px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--bg-white);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      nav a { padding: 10px 10px; font-size: 0.9em; }
+      section { padding: 30px 20px; }
+      h2 { font-size: 2em; }
+      h3 { font-size: 1.5em; }
+      .form-group input, .form-group select { padding: 10px; }
+      .cta-button { font-size: 1.1em; padding: 15px 30px; }
+      .keyword-list li { font-size: 0.85em; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>PV5 카고 및 패신저 보험료 비교 분석</h1>
+      <p>카고 vs. 패신저 모델, 2026년 최신 보험료 견적 및 절약 전략 가이드</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#intro">개요</a>
+    <a href="#comparison">카고 vs 패신저 비교</a>
+    <a href="#discounts">할인 혜택</a>
+    <a href="#calculator">보험료 계산기</a>
+    <a href="#faq">자주 묻는 질문</a>
+    <a href="#related-keywords">연관 키워드</a>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Section 1: Introduction -->
+      <section id="intro">
+        <h2>PV5 모델 보험료 완벽 가이드: 2026년 기준</h2>
+        <p>기아의 대표 미니밴인 PV5 (신형 카니발) 모델은 가족용 차량으로 인기가 높습니다. 그러나 PV5는 모델에 따라 '승용차' 또는 '화물차'로 분류될 수 있습니다. 특히 <strong>PV5 카고 (Cargo)</strong> 모델은 밴(Van) 모델로 분류되어 <strong>패신저 (Passenger)</strong> 모델과 보험료 산정 방식에 큰 차이가 발생합니다. 이 가이드는 2026년 기준으로 PV5의 다양한 모델(하이브리드 포함)에 대한 정확한 보험료 견적을 이해하고, 숨겨진 할인 혜택을 찾아 최저가로 가입하는 방법을 제시합니다.</p>
+        <p>PV5 보험료를 정확하게 예측하려면 단순히 차량 가격뿐만 아니라 차량의 용도(승용/화물), 운전자 특성(나이, 경력), 그리고 첨단 안전장치 장착 여부 등을 종합적으로 고려해야 합니다. 이 글에서는 PV5 모델 오너들이 궁금해하는 핵심 질문들을 중심으로 전문적인 분석을 제공합니다.</p>
+
+        <h3>PV5 보험료 절약, 왜 중요할까요?</h3>
+        <p>PV5는 차량가액이 높은 모델 중 하나로, 자차 보험료 비중이 높습니다. 따라서 운전자 조건에 맞는 최적의 보험료를 찾는 것이 중요합니다. 특히 카고 모델과 패신저 모델의 보험료 차이는 연간 수십만 원에 달할 수 있어, 정확한 비교를 통해 절약하는 것이 핵심입니다.</p>
+      </section>
+
+      <!-- Section 2: Cargo vs. Passenger Comparison -->
+      <section id="comparison">
+        <h2>PV5 카고 vs. 패신저: 보험료 산정의 결정적 차이점 분석</h2>
+        <p>PV5 카니발 모델은 '카고'와 '패신저'로 구분되며, 이 둘의 보험료는 다르게 책정됩니다. 주요 차이점은 차량의 법적 분류와 이에 따른 보험료율 적용입니다. 카고 모델은 밴(Van) 형태의 화물차로 분류되어, 패신저 모델(승합차/승용차)과는 다른 보험 요율이 적용됩니다.</p>
+
+        <h3>카고 모델 보험료의 특징 (화물차 분류)</h3>
+        <ul>
+          <li><strong>의무보험료 (책임보험):</strong> 화물차는 승용차보다 의무보험료가 높게 책정되는 경우가 많습니다. 이는 화물차의 사고 시 피해 보상 기준이 승용차와 다르기 때문입니다.</li>
+          <li><strong>자차 보험료 (차량가액):</strong> 카고 모델은 패신저 모델에 비해 차량가액이 낮게 책정되어, 자차 보험료는 상대적으로 저렴할 수 있습니다.</li>
+          <li><strong>운전자 범위:</strong> 화물차 보험은 운전자 범위 설정에 제한이 있을 수 있습니다.</li>
+          <li><strong>할인 특약 적용:</strong> 일부 할인 특약(예: 다자녀 할인)은 승용차 전용으로 분류되어 카고 모델에는 적용되지 않을 수 있습니다.</li>
+        </ul>
+
+        <h3>패신저 모델 보험료의 특징 (승합차/승용차 분류)</h3>
+        <ul>
+          <li><strong>높은 차량가액:</strong> 7인승, 9인승, 하이리무진 등 옵션이 풍부한 패신저 모델은 카고 모델보다 차량가액이 훨씬 높아 자차 보험료가 높게 형성됩니다.</li>
+          <li><strong>다양한 할인 특약:</strong> 승용차 기반의 보험 특약(다자녀, 첨단 안전장치 할인 등)을 폭넓게 적용받을 수 있습니다.</li>
+          <li><strong>운전자 연령/경력 영향:</strong> 운전자 연령과 운전 경력에 따라 보험료가 민감하게 변동됩니다.</li>
+        </ul>
+
+        <h3>[표] PV5 카고 vs. 패신저 보험료 예상 비교 (2026년 기준)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>PV5 카고 (화물차)</th>
+              <th>PV5 패신저 (승용/승합차)</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>차량가액</td>
+              <td>상대적으로 낮음 (밴 모델)</td>
+              <td>상대적으로 높음 (7~11인승)</td>
+              <td>자차 보험료의 핵심 산정 기준</td>
+            </tr>
+            <tr>
+              <td>책임보험료</td>
+              <td>높게 책정될 가능성 있음</td>
+              <td>상대적으로 낮게 책정될 수 있음</td>
+              <td>화물차 vs 승용차 분류에 따른 차이</td>
+            </tr>
+            <tr>
+              <td>자차보험료</td>
+              <td>낮게 책정될 수 있음</td>
+              <td>높게 책정될 수 있음</td>
+              <td>차량 가격 및 수리비 반영</td>
+            </tr>
+            <tr>
+              <td>주요 할인 특약</td>
+              <td>일부 제한적 (예: 다자녀 할인)</td>
+              <td>대부분 적용 가능</td>
+              <td>보험사별 정책 확인 필수</td>
+            </tr>
+            <tr>
+              <td>총 보험료</td>
+              <td>운전자 조건에 따라 패신저 모델보다 저렴할 수 있음</td>
+              <td>차량가액에 따라 높게 형성될 수 있음</td>
+              <td>평균적인 운전자 기준 예상</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>결론:</strong> PV5 보험료 싼곳을 찾으려면 모델별 특성을 정확히 이해해야 합니다. 단순한 차량 가격 비교를 넘어, 어떤 특약을 적용받을 수 있는지 확인하고 견적을 내야 합니다.</p>
+      </section>
+
+      <!-- Section 3: Detailed Discount and 절약 strategies -->
+      <section id="discounts">
+        <h2>PV5 보험료 절약 비법: 2026년 필수 할인 팁</h2>
+        <p>PV5 보험료는 운전자 조건에 따라 30% 이상 절감될 수 있습니다. 2026년 기준 PV5 오너들이 반드시 챙겨야 할 핵심 할인 특약을 안내합니다.</p>
+
+        <h3>1. 주행거리 마일리지 할인 특약</h3>
+        <p>연간 주행거리가 짧을수록 보험료를 대폭 할인해주는 특약입니다. PV5 오너 중 주말 레저용이나 단거리 출퇴근용으로 차량을 사용하는 경우 반드시 확인해야 합니다. 주행거리에 따라 10%~30%까지 할인율이 적용되며, 보험사별로 기준이 다릅니다.</p>
+        <ul>
+          <li><strong>할인 기준 (예시):</strong> 3,000km 이하, 5,000km 이하, 10,000km 이하.</li>
+          <li><strong>적용 모델:</strong> PV5 카고, PV5 패신저, PV5 하이리무진 등 전 모델 적용 가능.</li>
+        </ul>
+
+        <h3>2. 첨단 안전장치 장착 할인 특약 (ADAS)</h3>
+        <p>PV5에는 전방 충돌 방지 보조 (FCA), 차선 이탈 경고 (LDW), 스마트 크루즈 컨트롤 (SCC) 등 다양한 첨단 안전장치가 탑재됩니다. 이러한 ADAS 장치는 사고 발생률을 낮추기 때문에 보험사에서 보험료 할인 혜택을 제공합니다. 2026년에는 이 할인이 더욱 강화될 전망입니다. PV5 하이브리드 모델은 이 기능이 기본 장착되는 경우가 많아 할인이 유리할 수 있습니다.</p>
+
+        <h3>3. 다자녀 할인 특약</h3>
+        <p>만 6세 이하 자녀가 있거나 다자녀(일반적으로 1명 또는 2명 이상) 가구의 경우, 보험료 할인을 받을 수 있습니다. PV5 패신저 모델(7인승, 9인승)은 가족 차량으로 주로 이용되므로 이 특약 적용 여부를 꼭 확인해야 합니다.</p>
+
+        <h3>4. 블랙박스 장착 할인 특약</h3>
+        <p>사고 시 책임 소재를 명확히 할 수 있는 블랙박스를 장착하면 보험료를 할인받을 수 있습니다. PV5는 기본적으로 블랙박스를 장착하는 경우가 많지만, 보험사에 등록해야 할인을 받을 수 있습니다.</p>
+
+        <h3>5. 운전자 한정 특약 및 운전자 범위 설정</h3>
+        <p>운전자 범위를 '부부 한정', '가족 한정' 등으로 좁히면 보험료가 크게 낮아집니다. 운전자 연령을 만 30세 이상, 만 35세 이상 등으로 설정하는 것도 저렴한 보험료를 찾는 핵심 전략입니다. 운전자 범위 설정에 따라 PV5 보험료가 평균 10만원에서 30만원까지 차이가 날 수 있습니다.</p>
+
+        <h3>[표] PV5 모델별 주요 할인 특약 요약</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>특약명</th>
+              <th>적용 가능 여부 (PV5 패신저)</th>
+              <th>적용 가능 여부 (PV5 카고)</th>
+              <th>예상 할인율</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>주행거리 할인</td>
+              <td>O</td>
+              <td>O</td>
+              <td>10% ~ 30%</td>
+            </tr>
+            <tr>
+              <td>첨단 안전장치 할인</td>
+              <td>O</td>
+              <td>O (장착 시)</td>
+              <td>3% ~ 10%</td>
+            </tr>
+            <tr>
+              <td>다자녀 할인</td>
+              <td>O</td>
+              <td>X (일부 보험사)</td>
+              <td>3% ~ 10%</td>
+            </tr>
+            <tr>
+              <td>블랙박스 할인</td>
+              <td>O</td>
+              <td>O</td>
+              <td>2% ~ 5%</td>
+            </tr>
+            <tr>
+              <td>T-map 안전운전 할인</td>
+              <td>O</td>
+              <td>O</td>
+              <td>10% 내외</td>
+            </tr>
+            <tr>
+              <td>자녀 할인 (태아 포함)</td>
+              <td>O</td>
+              <td>X (일부 보험사)</td>
+              <td>3% ~ 10%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 4: Insurance Cost Calculation Form (User Interaction for retention) -->
+      <section id="calculator">
+        <h2>PV5 보험료 예상 금액 계산기</h2>
+        <p>PV5 모델의 정확한 보험료를 계산하려면 운전자 조건과 차량 정보를 입력해야 합니다. 아래의 간단한 계산기를 통해 예상 금액을 확인하고 최저가 견적을 비교해 보세요. 이 계산기는 일반적인 보험료 산정 기준을 바탕으로 하며, 실제 견적과 차이가 있을 수 있습니다. (2026년도 기준 반영)</p>
+
+        <form id="insuranceCalcForm" onsubmit="calculateInsurance(event)">
+          <div class="form-group">
+            <label for="carModel">PV5 모델 선택</label>
+            <select id="carModel" name="carModel">
+              <option value="passenger">PV5 패신저 9인승</option>
+              <option value="cargo">PV5 카고 밴</option>
+              <option value="hybrid">PV5 하이브리드</option>
+              <option value="highlimo">PV5 하이리무진 7인승</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="driverAge">운전자 나이 (만 나이)</label>
+            <input type="number" id="driverAge" name="driverAge" min="19" max="70" placeholder="예: 35" required />
+          </div>
+
+          <div class="form-group">
+            <label for="experience">운전 경력 (년)</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" placeholder="예: 5" required />
+          </div>
+
+          <div class="form-group">
+            <label for="accidentHistory">최근 3년 내 사고 이력 (유/무)</label>
+            <select id="accidentHistory" name="accidentHistory">
+              <option value="none">없음</option>
+              <option value="minor">1회 경미한 사고</option>
+              <option value="major">1회 이상 주요 사고</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mileage">예상 연간 주행거리 (km)</label>
+            <input type="number" id="mileage" name="mileage" min="0" placeholder="예: 12000" required />
+          </div>
+
+          <button type="submit" class="cta-button">예상 보험료 계산하기</button>
+        </form>
+
+        <div id="resultContainer" style="margin-top: 20px; text-align: center; font-size: 1.2em; font-weight: bold;"></div>
+      </section>
+
+      <!-- Section 5: 미래 전망 (Future Outlook) -->
+      <section>
+        <h2>PV5 보험료의 미래 전망: 2026년 이후 변화 예측</h2>
+        <p>2026년 이후 자동차 보험 시장은 PV5 모델과 같은 첨단 기술 차량의 증가에 따라 큰 변화를 겪을 것으로 예상됩니다. 특히 '운전 습관 연동 보험(UBI)'과 '첨단 안전장치 할인'이 더욱 중요해질 전망입니다.</p>
+
+        <h3>1. 운전 습관 연동 보험(UBI)의 확대</h3>
+        <p>T-map, 카카오내비 등 내비게이션 앱의 운전 점수를 활용한 할인 혜택이 보편화됩니다. PV5 오너가 평소 안전 운전을 한다면, 보험료를 최대 10%까지 절약할 수 있습니다. 2026년에는 보험사들이 더욱 다양한 데이터를 활용하여 운전 습관에 따른 보험료 차등을 강화할 것입니다.</p>
+
+        <h3>2. PV5 하이브리드 모델의 보험료 안정화</h3>
+        <p>PV5 하이브리드 모델이 시장에 자리 잡으면서 초기에는 높았던 자차 보험료가 점차 안정화될 것으로 보입니다. 이는 하이브리드 차량의 사고율 데이터가 충분히 누적되고, 부품 공급망이 안정화되면서 수리비 부담이 줄어들기 때문입니다. 하지만 여전히 배터리 관련 수리비가 높을 수 있어, 자차 보험 가입 시 자기부담금을 적절히 설정하는 것이 중요합니다.</p>
+
+        <h3>3. 자동차 보험료 순위와 비교 견적의 중요성</h3>
+        <p>보험사별로 PV5 모델의 손해율(사고율) 분석 결과가 달라지면서, 보험사 간의 가격 차이가 더욱 벌어질 것입니다. 특정 보험사는 PV5 카고 모델을 선호하여 저렴한 보험료를 제시하는 반면, 다른 보험사는 PV5 패신저 모델에 높은 할인을 적용할 수 있습니다. 따라서 2026년에도 최저가 견적을 찾기 위해서는 최소 3개 이상의 보험사를 비교하는 것이 필수적입니다.</p>
+
+        <h3>[표] PV5 모델별 보험료 산정 변화 그래프 예측 (2024년 대비 2026년)</h3>
+        <div class="graph-container">
+          <p style="text-align: center; font-weight: bold;">PV5 모델 유형별 평균 보험료 변동 예측 (2024년 기준 100%)</p>
+          <div style="width: 100%; height: 10px; background-color: #eee; margin-bottom: 5px;"></div>
+          <p>PV5 패신저 9인승 (2024년식)</p>
+          <div class="graph-bar" style="width: 90%; background-color: #00796b;">90%</div>
+          <p>PV5 카고 (2024년식)</p>
+          <div class="graph-bar" style="width: 85%; background-color: #00796b;">85%</div>
+          <p>PV5 하이브리드 (2025년식)</p>
+          <div class="graph-bar" style="width: 105%; background-color: #ff8f00;">105%</div>
+          <p>PV5 하이리무진 (2025년식)</p>
+          <div class="graph-bar" style="width: 110%; background-color: #ff8f00;">110%</div>
+          <p style="font-size: 0.9em; margin-top: 10px;">* 예상치로, 실제 데이터에 따라 달라질 수 있습니다.</p>
+        </div>
+      </section>
+
+      <!-- Section 6: FAQ (for Naver search snippet optimization) -->
+      <section id="faq">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">PV5 카고 모델은 왜 패신저 모델보다 자차 보험료가 저렴한가요?<span>+</span></div>
+          <div class="faq-answer">
+            <p>PV5 카고 모델은 차량가액이 패신저 모델(7인승, 9인승)보다 낮게 책정됩니다. 자동차 보험료의 자차(자기차량손해) 부분은 차량가액을 기준으로 산정되므로, 카고 모델의 자차 보험료가 더 낮습니다. 또한, 승합차/승용차로 분류되는 패신저 모델에 비해 카고 모델의 차량 사고율 통계가 다르게 잡히는 것도 영향을 미칩니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">PV5 하이브리드 모델은 보험료가 비싸다는 말이 사실인가요?<span>+</span></div>
+          <div class="faq-answer">
+            <p>하이브리드 차량은 일반 가솔린/디젤 차량에 비해 배터리 및 관련 부품 가격이 높습니다. 사고 발생 시 수리비가 높게 발생할 수 있어, 자차 보험료가 다소 높게 책정될 수 있습니다. 그러나 보험사별 친환경차 할인 특약이 제공되는 경우도 있으므로 여러 보험사의 견적을 비교해 보는 것이 중요합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">PV5 하이리무진 모델 보험료는 일반 PV5 모델과 얼마나 차이가 나나요?<span>+</span></div>
+          <div class="faq-answer">
+            <p>PV5 하이리무진 모델은 일반 모델보다 차량가액이 월등히 높습니다. 특히 고급 옵션과 특수 제작된 루프 부분이 사고 시 수리비가 많이 발생할 수 있어, 자차 보험료가 높게 책정됩니다. 하이리무진은 차량가액이 높기 때문에 보험사별 비교 견적이 더욱 중요합니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">PV5 보험료를 가장 저렴하게 가입하는 방법은 무엇인가요?<span>+</span></div>
+          <div class="faq-answer">
+            <p>가장 저렴한 보험료를 찾기 위해서는 온라인 다이렉트 보험 비교 사이트를 활용해야 합니다. 오프라인 설계사를 통한 가입보다 평균 15% 이상 저렴하며, PV5 모델에 특화된 할인 특약(주행거리, 안전장치 등)을 정확하게 적용하여 여러 보험사의 견적을 동시에 비교할 수 있습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Related Keywords and External Links -->
+      <section id="related-keywords">
+        <h2>함께 많이 찾는 키워드 (Naver 자동완성 및 연관검색어 분석)</h2>
+        <p>PV5 보험료에 관심 있는 사용자들이 함께 검색하는 주요 키워드입니다. 이 키워드들을 참고하여 보험료를 비교하고 필요한 정보를 찾아보세요.</p>
+        <ul class="keyword-list">
+          <li>PV5 보험료 평균</li>
+          <li>카니발 보험료 견적</li>
+          <li>카니발 하이브리드 보험료 비교</li>
+          <li>PV5 카고 보험료 싼곳</li>
+          <li>PV5 패신저 보험료 장단점</li>
+          <li>카니발 하이리무진 보험료</li>
+          <li>PV5 보험료 계산기</li>
+          <li>2026년 PV5 보험료 변화</li>
+          <li>PV5 보험료 할인 팁</li>
+          <li>PV5 모델별 보험료 차이점</li>
+          <li>카니발 자차 보험료 후기</li>
+          <li>카니발 9인승 보험료</li>
+          <li>카니발 7인승 보험료</li>
+          <li>카니발 디젤 보험료</li>
+          <li>카니발 가솔린 보험료</li>
+          <li>다이렉트 자동차 보험료 비교</li>
+          <li>운전자 보험료 절약 비법</li>
+          <li>PV5 사고 이력 보험료 영향</li>
+          <li>PV5 중고차 보험료</li>
+          <li>PV5 운전자 범위 설정</li>
+          <li>PV5 보험료 순위</li>
+          <li>PV5 내돈내산 보험료</li>
+          <li>PV5 보험료 가입 팁</li>
+        </ul>
+      </section>
+
+      <!-- Section 8: Reliable External Resources -->
+      <section>
+        <h2>공인된 신뢰성 있는 외부 자료 및 참고 링크</h2>
+        <p>PV5 보험료 산정 및 자동차 보험 관련 정보를 확인하는 데 도움이 되는 신뢰할 수 있는 외부 링크입니다.</p>
+        <ul>
+          <li><a href="https://www.fss.or.kr/" target="_blank" rel="noopener">금융감독원 (FSS) - 보험 관련 소비자 정보</a></li>
+          <li><a href="https://www.kidi.or.kr/" target="_blank" rel="noopener">보험개발원 (KIDI) - 자동차보험료 산정 기준 및 통계</a></li>
+          <li><a href="https://www.law.go.kr/법령/자동차관리법" target="_blank" rel="noopener">법제처 - 자동차관리법 (차량 분류 기준 관련)</a></li>
+          <li><a href="https://auto.naver.com/" target="_blank" rel="noopener">네이버 자동차 - 신차 정보 및 차량 가격</a></li>
+          <li><a href="https://namu.wiki/w/%EC%B9%B4%EB%8B%88%EB%B0%9C" target="_blank" rel="noopener">나무위키 - 카니발 모델 정보 및 역사</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+
+    // Simple Insurance Calculation Logic (for user engagement)
+    function calculateInsurance(event) {
+      event.preventDefault();
+      const carModel = document.getElementById('carModel').value;
+      const age = parseInt(document.getElementById('driverAge').value);
+      const experience = parseInt(document.getElementById('experience').value);
+      const accidentHistory = document.getElementById('accidentHistory').value;
+      const mileage = parseInt(document.getElementById('mileage').value);
+
+      if (isNaN(age) || isNaN(experience) || isNaN(mileage)) {
+        document.getElementById('resultContainer').innerText = '모든 필드를 정확히 입력해주세요.';
+        return;
+      }
+
+      // Base rate based on model type (hypothetical)
+      let baseRate = 0;
+      if (carModel === 'passenger') {
+        baseRate = 800000; // Average base rate for Passenger
+      } else if (carModel === 'cargo') {
+        baseRate = 650000; // Average base rate for Cargo (lower car value)
+      } else if (carModel === 'hybrid') {
+        baseRate = 950000; // Higher base rate for Hybrid (battery cost)
+      } else if (carModel === 'highlimo') {
+        baseRate = 1200000; // Highest base rate for Hi-limousine
+      }
+
+      // Adjustments based on age (younger drivers pay more)
+      if (age < 26) {
+        baseRate *= 1.4;
+      } else if (age < 30) {
+        baseRate *= 1.2;
+      } else if (age >= 40) {
+        baseRate *= 0.9;
+      }
+
+      // Adjustments based on experience (less experienced drivers pay more)
+      if (experience < 3) {
+        baseRate *= 1.3;
+      } else if (experience >= 10) {
+        baseRate *= 0.85;
+      }
+
+      // Adjustments based on accident history
+      if (accidentHistory === 'minor') {
+        baseRate *= 1.15;
+      } else if (accidentHistory === 'major') {
+        baseRate *= 1.4;
+      }
+
+      // Adjustments based on mileage (mileage discount)
+      if (mileage < 5000) {
+        baseRate *= 0.8;
+      } else if (mileage < 10000) {
+        baseRate *= 0.9;
+      }
+
+      const estimatedPremium = Math.round(baseRate / 10000) * 10000; // Round to nearest 10k won
+
+      document.getElementById('resultContainer').innerHTML = `
+        <p><strong>PV5 예상 보험료: ${estimatedPremium.toLocaleString()}원</strong></p>
+        <p style="font-size: 0.9em; color: gray;">* 이 금액은 예상치이며, 정확한 견적은 보험사 비교를 통해 확인하세요.</p>
+      `;
+    }
+  </script>
+
+  
